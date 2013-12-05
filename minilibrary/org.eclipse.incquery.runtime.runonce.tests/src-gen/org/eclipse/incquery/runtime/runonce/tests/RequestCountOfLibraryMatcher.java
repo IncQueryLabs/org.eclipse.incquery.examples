@@ -36,7 +36,6 @@ import org.eclipse.incquery.runtime.runonce.tests.util.RequestCountOfLibraryQuer
  * @see RequestCountOfLibraryQuerySpecification
  * 
  */
-@SuppressWarnings("all")
 public class RequestCountOfLibraryMatcher extends BaseMatcher<RequestCountOfLibraryMatch> {
   /**
    * @return the singleton instance of the query specification of this pattern

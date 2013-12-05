@@ -10,7 +10,6 @@ import org.eclipse.incquery.runtime.runonce.tests.SumOfPagesInLibraryMatch;
  * Clients should derive an (anonymous) class that implements the abstract process().
  * 
  */
-@SuppressWarnings("all")
 public abstract class SumOfPagesInLibraryProcessor implements IMatchProcessor<SumOfPagesInLibraryMatch> {
   /**
    * Defines the action that is to be executed on each match.
@@ -22,7 +21,7 @@ public abstract class SumOfPagesInLibraryProcessor implements IMatchProcessor<Su
   
   @Override
   public void process(final SumOfPagesInLibraryMatch match) {
-    process(match.getLibrary(), match.getSumOfPages());
+    process(match.getLibrary(), match.getSumOfPages());  				
     
   }
 }

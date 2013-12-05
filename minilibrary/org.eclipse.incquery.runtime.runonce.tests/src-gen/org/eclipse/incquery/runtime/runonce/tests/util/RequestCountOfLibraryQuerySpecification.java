@@ -13,7 +13,6 @@ import org.eclipse.incquery.runtime.runonce.tests.RequestCountOfLibraryMatcher;
  * @see RequestCountOfLibraryMatch
  * 
  */
-@SuppressWarnings("all")
 public final class RequestCountOfLibraryQuerySpecification extends BaseGeneratedQuerySpecification<RequestCountOfLibraryMatcher> {
   /**
    * @return the singleton instance of the query specification
@@ -51,8 +50,6 @@ public final class RequestCountOfLibraryQuerySpecification extends BaseGenerated
   private RequestCountOfLibraryQuerySpecification() throws IncQueryException {
     super();
   }
-  
-  @SuppressWarnings("all")
   public static class Provider implements IQuerySpecificationProvider<RequestCountOfLibraryQuerySpecification> {
     @Override
     public RequestCountOfLibraryQuerySpecification get() throws IncQueryException {
@@ -60,8 +57,6 @@ public final class RequestCountOfLibraryQuerySpecification extends BaseGenerated
     }
   }
   
-  
-  @SuppressWarnings("all")
   private static class LazyHolder {
     private final static RequestCountOfLibraryQuerySpecification INSTANCE = make();
     

@@ -21,7 +21,6 @@ import org.eclipse.incquery.runtime.exception.IncQueryException;
  * @see SumOfPagesInLibraryProcessor
  * 
  */
-@SuppressWarnings("all")
 public abstract class SumOfPagesInLibraryMatch extends BasePatternMatch {
   private Library fLibrary;
   
@@ -149,8 +148,6 @@ public abstract class SumOfPagesInLibraryMatch extends BasePatternMatch {
     }
     
   }
-  
-  @SuppressWarnings("all")
   static final class Mutable extends SumOfPagesInLibraryMatch {
     Mutable(final Library pLibrary, final Integer pSumOfPages) {
       super(pLibrary, pSumOfPages);
@@ -163,8 +160,6 @@ public abstract class SumOfPagesInLibraryMatch extends BasePatternMatch {
     }
   }
   
-  
-  @SuppressWarnings("all")
   static final class Immutable extends SumOfPagesInLibraryMatch {
     Immutable(final Library pLibrary, final Integer pSumOfPages) {
       super(pLibrary, pSumOfPages);

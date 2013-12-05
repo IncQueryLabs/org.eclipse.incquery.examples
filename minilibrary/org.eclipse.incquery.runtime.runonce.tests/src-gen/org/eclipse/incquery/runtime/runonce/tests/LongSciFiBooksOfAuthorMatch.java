@@ -22,7 +22,6 @@ import org.eclipse.incquery.runtime.exception.IncQueryException;
  * @see LongSciFiBooksOfAuthorProcessor
  * 
  */
-@SuppressWarnings("all")
 public abstract class LongSciFiBooksOfAuthorMatch extends BasePatternMatch {
   private Writer fAuthor;
   
@@ -150,8 +149,6 @@ public abstract class LongSciFiBooksOfAuthorMatch extends BasePatternMatch {
     }
     
   }
-  
-  @SuppressWarnings("all")
   static final class Mutable extends LongSciFiBooksOfAuthorMatch {
     Mutable(final Writer pAuthor, final Book pBook) {
       super(pAuthor, pBook);
@@ -164,8 +161,6 @@ public abstract class LongSciFiBooksOfAuthorMatch extends BasePatternMatch {
     }
   }
   
-  
-  @SuppressWarnings("all")
   static final class Immutable extends LongSciFiBooksOfAuthorMatch {
     Immutable(final Writer pAuthor, final Book pBook) {
       super(pAuthor, pBook);

@@ -22,7 +22,6 @@ import org.eclipse.incquery.runtime.exception.IncQueryException;
  * @see SingleAuthoredFirstBooksProcessor
  * 
  */
-@SuppressWarnings("all")
 public abstract class SingleAuthoredFirstBooksMatch extends BasePatternMatch {
   private Library fLibrary;
   
@@ -150,8 +149,6 @@ public abstract class SingleAuthoredFirstBooksMatch extends BasePatternMatch {
     }
     
   }
-  
-  @SuppressWarnings("all")
   static final class Mutable extends SingleAuthoredFirstBooksMatch {
     Mutable(final Library pLibrary, final Book pFirstBook) {
       super(pLibrary, pFirstBook);
@@ -164,8 +161,6 @@ public abstract class SingleAuthoredFirstBooksMatch extends BasePatternMatch {
     }
   }
   
-  
-  @SuppressWarnings("all")
   static final class Immutable extends SingleAuthoredFirstBooksMatch {
     Immutable(final Library pLibrary, final Book pFirstBook) {
       super(pLibrary, pFirstBook);

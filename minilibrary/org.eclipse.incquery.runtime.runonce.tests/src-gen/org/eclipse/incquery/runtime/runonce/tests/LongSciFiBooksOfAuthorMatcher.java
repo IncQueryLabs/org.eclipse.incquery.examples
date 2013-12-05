@@ -39,7 +39,6 @@ import org.eclipse.incquery.runtime.runonce.tests.util.LongSciFiBooksOfAuthorQue
  * @see LongSciFiBooksOfAuthorQuerySpecification
  * 
  */
-@SuppressWarnings("all")
 public class LongSciFiBooksOfAuthorMatcher extends BaseMatcher<LongSciFiBooksOfAuthorMatch> {
   /**
    * @return the singleton instance of the query specification of this pattern

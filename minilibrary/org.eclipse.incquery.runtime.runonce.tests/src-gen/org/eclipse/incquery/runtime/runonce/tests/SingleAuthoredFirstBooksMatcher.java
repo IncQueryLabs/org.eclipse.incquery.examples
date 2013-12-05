@@ -38,7 +38,6 @@ import org.eclipse.incquery.runtime.runonce.tests.util.SingleAuthoredFirstBooksQ
  * @see SingleAuthoredFirstBooksQuerySpecification
  * 
  */
-@SuppressWarnings("all")
 public class SingleAuthoredFirstBooksMatcher extends BaseMatcher<SingleAuthoredFirstBooksMatch> {
   /**
    * @return the singleton instance of the query specification of this pattern

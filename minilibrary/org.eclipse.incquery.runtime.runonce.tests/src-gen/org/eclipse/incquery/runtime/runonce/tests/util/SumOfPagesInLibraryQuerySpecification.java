@@ -13,7 +13,6 @@ import org.eclipse.incquery.runtime.runonce.tests.SumOfPagesInLibraryMatcher;
  * @see SumOfPagesInLibraryMatch
  * 
  */
-@SuppressWarnings("all")
 public final class SumOfPagesInLibraryQuerySpecification extends BaseGeneratedQuerySpecification<SumOfPagesInLibraryMatcher> {
   /**
    * @return the singleton instance of the query specification
@@ -51,8 +50,6 @@ public final class SumOfPagesInLibraryQuerySpecification extends BaseGeneratedQu
   private SumOfPagesInLibraryQuerySpecification() throws IncQueryException {
     super();
   }
-  
-  @SuppressWarnings("all")
   public static class Provider implements IQuerySpecificationProvider<SumOfPagesInLibraryQuerySpecification> {
     @Override
     public SumOfPagesInLibraryQuerySpecification get() throws IncQueryException {
@@ -60,8 +57,6 @@ public final class SumOfPagesInLibraryQuerySpecification extends BaseGeneratedQu
     }
   }
   
-  
-  @SuppressWarnings("all")
   private static class LazyHolder {
     private final static SumOfPagesInLibraryQuerySpecification INSTANCE = make();
     

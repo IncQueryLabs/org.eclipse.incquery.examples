@@ -37,7 +37,6 @@ import org.eclipse.incquery.runtime.runonce.tests.util.BookAuthorsQuerySpecifica
  * @see BookAuthorsQuerySpecification
  * 
  */
-@SuppressWarnings("all")
 public class BookAuthorsMatcher extends BaseMatcher<BookAuthorsMatch> {
   /**
    * @return the singleton instance of the query specification of this pattern

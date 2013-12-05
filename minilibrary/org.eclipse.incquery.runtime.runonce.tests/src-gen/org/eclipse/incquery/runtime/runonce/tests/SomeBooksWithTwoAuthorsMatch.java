@@ -22,7 +22,6 @@ import org.eclipse.incquery.runtime.exception.IncQueryException;
  * @see SomeBooksWithTwoAuthorsProcessor
  * 
  */
-@SuppressWarnings("all")
 public abstract class SomeBooksWithTwoAuthorsMatch extends BasePatternMatch {
   private Library fLibrary;
   
@@ -150,8 +149,6 @@ public abstract class SomeBooksWithTwoAuthorsMatch extends BasePatternMatch {
     }
     
   }
-  
-  @SuppressWarnings("all")
   static final class Mutable extends SomeBooksWithTwoAuthorsMatch {
     Mutable(final Library pLibrary, final Book pBook) {
       super(pLibrary, pBook);
@@ -164,8 +161,6 @@ public abstract class SomeBooksWithTwoAuthorsMatch extends BasePatternMatch {
     }
   }
   
-  
-  @SuppressWarnings("all")
   static final class Immutable extends SomeBooksWithTwoAuthorsMatch {
     Immutable(final Library pLibrary, final Book pBook) {
       super(pLibrary, pBook);

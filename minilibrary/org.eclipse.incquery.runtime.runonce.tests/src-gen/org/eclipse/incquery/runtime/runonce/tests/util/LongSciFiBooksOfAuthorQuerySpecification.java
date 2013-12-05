@@ -13,7 +13,6 @@ import org.eclipse.incquery.runtime.runonce.tests.LongSciFiBooksOfAuthorMatcher;
  * @see LongSciFiBooksOfAuthorMatch
  * 
  */
-@SuppressWarnings("all")
 public final class LongSciFiBooksOfAuthorQuerySpecification extends BaseGeneratedQuerySpecification<LongSciFiBooksOfAuthorMatcher> {
   /**
    * @return the singleton instance of the query specification
@@ -51,8 +50,6 @@ public final class LongSciFiBooksOfAuthorQuerySpecification extends BaseGenerate
   private LongSciFiBooksOfAuthorQuerySpecification() throws IncQueryException {
     super();
   }
-  
-  @SuppressWarnings("all")
   public static class Provider implements IQuerySpecificationProvider<LongSciFiBooksOfAuthorQuerySpecification> {
     @Override
     public LongSciFiBooksOfAuthorQuerySpecification get() throws IncQueryException {
@@ -60,8 +57,6 @@ public final class LongSciFiBooksOfAuthorQuerySpecification extends BaseGenerate
     }
   }
   
-  
-  @SuppressWarnings("all")
   private static class LazyHolder {
     private final static LongSciFiBooksOfAuthorQuerySpecification INSTANCE = make();
     

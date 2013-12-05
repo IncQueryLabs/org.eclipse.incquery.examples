@@ -10,7 +10,6 @@ import org.eclipse.incquery.runtime.runonce.tests.RequestCountOfLibraryMatch;
  * Clients should derive an (anonymous) class that implements the abstract process().
  * 
  */
-@SuppressWarnings("all")
 public abstract class RequestCountOfLibraryProcessor implements IMatchProcessor<RequestCountOfLibraryMatch> {
   /**
    * Defines the action that is to be executed on each match.
@@ -22,7 +21,7 @@ public abstract class RequestCountOfLibraryProcessor implements IMatchProcessor<
   
   @Override
   public void process(final RequestCountOfLibraryMatch match) {
-    process(match.getLibrary(), match.getReqCount());
+    process(match.getLibrary(), match.getReqCount());  				
     
   }
 }

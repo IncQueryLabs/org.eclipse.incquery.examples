@@ -11,7 +11,6 @@ import org.eclipse.incquery.runtime.runonce.tests.LongSciFiBooksOfAuthorMatch;
  * Clients should derive an (anonymous) class that implements the abstract process().
  * 
  */
-@SuppressWarnings("all")
 public abstract class LongSciFiBooksOfAuthorProcessor implements IMatchProcessor<LongSciFiBooksOfAuthorMatch> {
   /**
    * Defines the action that is to be executed on each match.
@@ -23,7 +22,7 @@ public abstract class LongSciFiBooksOfAuthorProcessor implements IMatchProcessor
   
   @Override
   public void process(final LongSciFiBooksOfAuthorMatch match) {
-    process(match.getAuthor(), match.getBook());
+    process(match.getAuthor(), match.getBook());  				
     
   }
 }

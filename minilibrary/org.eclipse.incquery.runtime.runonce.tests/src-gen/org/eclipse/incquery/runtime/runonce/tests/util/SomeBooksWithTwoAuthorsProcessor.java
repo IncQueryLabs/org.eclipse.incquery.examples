@@ -11,7 +11,6 @@ import org.eclipse.incquery.runtime.runonce.tests.SomeBooksWithTwoAuthorsMatch;
  * Clients should derive an (anonymous) class that implements the abstract process().
  * 
  */
-@SuppressWarnings("all")
 public abstract class SomeBooksWithTwoAuthorsProcessor implements IMatchProcessor<SomeBooksWithTwoAuthorsMatch> {
   /**
    * Defines the action that is to be executed on each match.
@@ -23,7 +22,7 @@ public abstract class SomeBooksWithTwoAuthorsProcessor implements IMatchProcesso
   
   @Override
   public void process(final SomeBooksWithTwoAuthorsMatch match) {
-    process(match.getLibrary(), match.getBook());
+    process(match.getLibrary(), match.getBook());  				
     
   }
 }

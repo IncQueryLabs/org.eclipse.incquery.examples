@@ -38,7 +38,6 @@ import org.eclipse.incquery.runtime.runonce.tests.util.BooksWithMultipleAuthorsQ
  * @see BooksWithMultipleAuthorsQuerySpecification
  * 
  */
-@SuppressWarnings("all")
 public class BooksWithMultipleAuthorsMatcher extends BaseMatcher<BooksWithMultipleAuthorsMatch> {
   /**
    * @return the singleton instance of the query specification of this pattern

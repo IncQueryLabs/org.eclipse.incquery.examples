@@ -30,7 +30,6 @@ import org.eclipse.incquery.runtime.runonce.tests.SumOfPagesInLibraryMatcher;
  * @see IPatternGroup
  * 
  */
-@SuppressWarnings("all")
 public final class Eiqlibrary extends BaseGeneratedPatternGroup {
   /**
    * Access the pattern group.
@@ -50,12 +49,12 @@ public final class Eiqlibrary extends BaseGeneratedPatternGroup {
   private static Eiqlibrary INSTANCE;
   
   private Eiqlibrary() throws IncQueryException {
+    querySpecifications.add(SingleAuthoredFirstBooksMatcher.querySpecification());
+    querySpecifications.add(SomeBooksWithTwoAuthorsMatcher.querySpecification());
     querySpecifications.add(SumOfPagesInLibraryMatcher.querySpecification());
+    querySpecifications.add(RequestCountOfLibraryMatcher.querySpecification());
     querySpecifications.add(LongSciFiBooksOfAuthorMatcher.querySpecification());
     querySpecifications.add(BooksWithMultipleAuthorsMatcher.querySpecification());
-    querySpecifications.add(SingleAuthoredFirstBooksMatcher.querySpecification());
-    querySpecifications.add(RequestCountOfLibraryMatcher.querySpecification());
-    querySpecifications.add(SomeBooksWithTwoAuthorsMatcher.querySpecification());
     querySpecifications.add(BookAuthorsMatcher.querySpecification());
     
   }

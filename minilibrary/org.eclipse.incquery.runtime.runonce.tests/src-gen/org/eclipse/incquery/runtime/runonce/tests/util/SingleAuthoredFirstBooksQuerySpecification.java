@@ -13,7 +13,6 @@ import org.eclipse.incquery.runtime.runonce.tests.SingleAuthoredFirstBooksMatche
  * @see SingleAuthoredFirstBooksMatch
  * 
  */
-@SuppressWarnings("all")
 public final class SingleAuthoredFirstBooksQuerySpecification extends BaseGeneratedQuerySpecification<SingleAuthoredFirstBooksMatcher> {
   /**
    * @return the singleton instance of the query specification
@@ -51,8 +50,6 @@ public final class SingleAuthoredFirstBooksQuerySpecification extends BaseGenera
   private SingleAuthoredFirstBooksQuerySpecification() throws IncQueryException {
     super();
   }
-  
-  @SuppressWarnings("all")
   public static class Provider implements IQuerySpecificationProvider<SingleAuthoredFirstBooksQuerySpecification> {
     @Override
     public SingleAuthoredFirstBooksQuerySpecification get() throws IncQueryException {
@@ -60,8 +57,6 @@ public final class SingleAuthoredFirstBooksQuerySpecification extends BaseGenera
     }
   }
   
-  
-  @SuppressWarnings("all")
   private static class LazyHolder {
     private final static SingleAuthoredFirstBooksQuerySpecification INSTANCE = make();
     

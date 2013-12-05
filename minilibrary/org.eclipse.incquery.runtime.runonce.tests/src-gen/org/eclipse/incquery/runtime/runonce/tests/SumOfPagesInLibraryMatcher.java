@@ -36,7 +36,6 @@ import org.eclipse.incquery.runtime.runonce.tests.util.SumOfPagesInLibraryQueryS
  * @see SumOfPagesInLibraryQuerySpecification
  * 
  */
-@SuppressWarnings("all")
 public class SumOfPagesInLibraryMatcher extends BaseMatcher<SumOfPagesInLibraryMatch> {
   /**
    * @return the singleton instance of the query specification of this pattern

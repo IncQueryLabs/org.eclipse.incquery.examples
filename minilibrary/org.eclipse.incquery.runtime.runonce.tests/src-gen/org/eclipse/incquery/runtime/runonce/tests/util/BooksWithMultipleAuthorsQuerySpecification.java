@@ -13,7 +13,6 @@ import org.eclipse.incquery.runtime.runonce.tests.BooksWithMultipleAuthorsMatche
  * @see BooksWithMultipleAuthorsMatch
  * 
  */
-@SuppressWarnings("all")
 public final class BooksWithMultipleAuthorsQuerySpecification extends BaseGeneratedQuerySpecification<BooksWithMultipleAuthorsMatcher> {
   /**
    * @return the singleton instance of the query specification
@@ -51,8 +50,6 @@ public final class BooksWithMultipleAuthorsQuerySpecification extends BaseGenera
   private BooksWithMultipleAuthorsQuerySpecification() throws IncQueryException {
     super();
   }
-  
-  @SuppressWarnings("all")
   public static class Provider implements IQuerySpecificationProvider<BooksWithMultipleAuthorsQuerySpecification> {
     @Override
     public BooksWithMultipleAuthorsQuerySpecification get() throws IncQueryException {
@@ -60,8 +57,6 @@ public final class BooksWithMultipleAuthorsQuerySpecification extends BaseGenera
     }
   }
   
-  
-  @SuppressWarnings("all")
   private static class LazyHolder {
     private final static BooksWithMultipleAuthorsQuerySpecification INSTANCE = make();
     

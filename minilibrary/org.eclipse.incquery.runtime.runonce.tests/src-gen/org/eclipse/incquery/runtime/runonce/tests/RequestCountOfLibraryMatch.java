@@ -21,7 +21,6 @@ import org.eclipse.incquery.runtime.exception.IncQueryException;
  * @see RequestCountOfLibraryProcessor
  * 
  */
-@SuppressWarnings("all")
 public abstract class RequestCountOfLibraryMatch extends BasePatternMatch {
   private Library fLibrary;
   
@@ -149,8 +148,6 @@ public abstract class RequestCountOfLibraryMatch extends BasePatternMatch {
     }
     
   }
-  
-  @SuppressWarnings("all")
   static final class Mutable extends RequestCountOfLibraryMatch {
     Mutable(final Library pLibrary, final Integer pReqCount) {
       super(pLibrary, pReqCount);
@@ -163,8 +160,6 @@ public abstract class RequestCountOfLibraryMatch extends BasePatternMatch {
     }
   }
   
-  
-  @SuppressWarnings("all")
   static final class Immutable extends RequestCountOfLibraryMatch {
     Immutable(final Library pLibrary, final Integer pReqCount) {
       super(pLibrary, pReqCount);

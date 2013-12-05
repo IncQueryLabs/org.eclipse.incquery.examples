@@ -11,7 +11,6 @@ import org.eclipse.incquery.runtime.runonce.tests.SingleAuthoredFirstBooksMatch;
  * Clients should derive an (anonymous) class that implements the abstract process().
  * 
  */
-@SuppressWarnings("all")
 public abstract class SingleAuthoredFirstBooksProcessor implements IMatchProcessor<SingleAuthoredFirstBooksMatch> {
   /**
    * Defines the action that is to be executed on each match.
@@ -23,7 +22,7 @@ public abstract class SingleAuthoredFirstBooksProcessor implements IMatchProcess
   
   @Override
   public void process(final SingleAuthoredFirstBooksMatch match) {
-    process(match.getLibrary(), match.getFirstBook());
+    process(match.getLibrary(), match.getFirstBook());  				
     
   }
 }

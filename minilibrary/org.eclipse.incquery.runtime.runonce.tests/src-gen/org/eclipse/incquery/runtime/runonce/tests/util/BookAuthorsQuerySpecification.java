@@ -13,7 +13,6 @@ import org.eclipse.incquery.runtime.runonce.tests.BookAuthorsMatcher;
  * @see BookAuthorsMatch
  * 
  */
-@SuppressWarnings("all")
 public final class BookAuthorsQuerySpecification extends BaseGeneratedQuerySpecification<BookAuthorsMatcher> {
   /**
    * @return the singleton instance of the query specification
@@ -51,8 +50,6 @@ public final class BookAuthorsQuerySpecification extends BaseGeneratedQuerySpeci
   private BookAuthorsQuerySpecification() throws IncQueryException {
     super();
   }
-  
-  @SuppressWarnings("all")
   public static class Provider implements IQuerySpecificationProvider<BookAuthorsQuerySpecification> {
     @Override
     public BookAuthorsQuerySpecification get() throws IncQueryException {
@@ -60,8 +57,6 @@ public final class BookAuthorsQuerySpecification extends BaseGeneratedQuerySpeci
     }
   }
   
-  
-  @SuppressWarnings("all")
   private static class LazyHolder {
     private final static BookAuthorsQuerySpecification INSTANCE = make();
     
