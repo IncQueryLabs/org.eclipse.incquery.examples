@@ -1,14 +1,8 @@
 package org.eclipse.incquery.runtime.runonce.tests;
 
+import org.eclipse.incquery.runtime.api.IPatternGroup;
 import org.eclipse.incquery.runtime.api.impl.BaseGeneratedPatternGroup;
 import org.eclipse.incquery.runtime.exception.IncQueryException;
-import org.eclipse.incquery.runtime.runonce.tests.BookAuthorsMatcher;
-import org.eclipse.incquery.runtime.runonce.tests.BooksWithMultipleAuthorsMatcher;
-import org.eclipse.incquery.runtime.runonce.tests.LongSciFiBooksOfAuthorMatcher;
-import org.eclipse.incquery.runtime.runonce.tests.RequestCountOfLibraryMatcher;
-import org.eclipse.incquery.runtime.runonce.tests.SingleAuthoredFirstBooksMatcher;
-import org.eclipse.incquery.runtime.runonce.tests.SomeBooksWithTwoAuthorsMatcher;
-import org.eclipse.incquery.runtime.runonce.tests.SumOfPagesInLibraryMatcher;
 
 /**
  * A pattern group formed of all patterns defined in eiqlibrary.eiq.
@@ -56,6 +50,5 @@ public final class Eiqlibrary extends BaseGeneratedPatternGroup {
     querySpecifications.add(LongSciFiBooksOfAuthorMatcher.querySpecification());
     querySpecifications.add(BooksWithMultipleAuthorsMatcher.querySpecification());
     querySpecifications.add(BookAuthorsMatcher.querySpecification());
-    
   }
 }
