@@ -50,6 +50,7 @@ class QueryBasedFeatureTest {
   @Test
   def simpleGetterTest(){
     
+    registerLogger(null)
     val rs = new ResourceSetImpl
     val resource = loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.system")
     
@@ -93,11 +94,13 @@ class QueryBasedFeatureTest {
         !data.writingTaskIds.contains(task.id)
       ].empty)
     ]
-        
+    val log = retrieveLoggerOutput(null)
+    assertTrue(log,log.empty)
   }
   
   @Test
   def simpleModifyTest(){
+    registerLogger(null)
     val rs = new ResourceSetImpl
     val resource = loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.system")
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.process")
@@ -121,10 +124,13 @@ class QueryBasedFeatureTest {
     val data = sys.data.get(0)
     data.readingTaskIds.clear
     assertTrue(data.readingTask.empty)
+    val log = retrieveLoggerOutput(null)
+    assertTrue(log,log.empty)
   }
   
   @Test
   def singleFeatureTest(){
+    registerLogger(null)
     val rs = new ResourceSetImpl
     val resource = loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.operation")
     
@@ -159,6 +165,8 @@ class QueryBasedFeatureTest {
         entry.taskId = task.id
       ]
     ]
+    val log = retrieveLoggerOutput(null)
+    assertTrue(log,log.empty)
   }
   
   @Test
@@ -176,18 +184,17 @@ class QueryBasedFeatureTest {
       it.id = tid
     ]
     
-    val engine = IncQueryEngine::on(rs)
-    engine.registerLogger
+    registerLogger(null)
     
     entry.task
     
-    val logOut = engine.retrieveLoggerOutput
+    val logOut = retrieveLoggerOutput(null)
     assertTrue(logOut.contains("[QueryBasedFeature] Space-time continuum breached (should never happen): multiple values for single feature!"));
   }
   
   @Test
   def initDuringMatcherBuilding(){
-    
+    registerLogger(null)
     val rs = new ResourceSetImpl
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.system")
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.process")
@@ -202,11 +209,13 @@ class QueryBasedFeatureTest {
       job.taskIds.clear
       assertTrue(job.tasks.empty)
     ]
+    val log = retrieveLoggerOutput(null)
+    assertTrue(log,log.empty)
   }
   
   @Test
   def uncachedSingleFeatureTest() {
-    
+    registerLogger(null)
     val rs = new ResourceSetImpl
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.system")
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.process")
@@ -224,10 +233,13 @@ class QueryBasedFeatureTest {
     checklist.entries.forEach[
       assertEquals(singleqbf.getValue(it),it.task)
     ]
+    val log = retrieveLoggerOutput(null)
+    assertTrue(log,log.empty)
   }
   
   @Test
   def uncachedManyFeatureTest() {
+    registerLogger(null)
     val rs = new ResourceSetImpl
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.system")
     loadAdditionalResourceFromUri(rs,"org.eclipse.incquery.examples.bpm.tests/model/Simple.process")
@@ -243,5 +255,7 @@ class QueryBasedFeatureTest {
     checklist.entries.forEach[
       assertEquals(manyqbf.getValue(it),it.jobs)
     ]
+    val log = retrieveLoggerOutput(null)
+    assertTrue(log,log.empty)
   }
 }
